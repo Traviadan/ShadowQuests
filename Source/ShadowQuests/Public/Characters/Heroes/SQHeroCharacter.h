@@ -20,4 +20,8 @@ public:
 
 	// Only called on the Server. Calls before Server's AcknowledgePossession.
 	virtual void PossessedBy(AController* NewController) override;
+
+protected:
+	// Client only
+	virtual void OnRep_PlayerState() override;
 };
