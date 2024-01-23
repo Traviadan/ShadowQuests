@@ -2,13 +2,20 @@
 
 
 #include "Characters/SQCharacterBase.h"
+#include "Characters/Abilities/SQAbilitySystemComponent.h"
 
 // Sets default values
 ASQCharacterBase::ASQCharacterBase()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
+	bAlwaysRelevant = true;
+}
+
+UAbilitySystemComponent* ASQCharacterBase::GetAbilitySystemComponent() const
+{
+	return AbilitySystemComponent.Get();
 }
 
 // Called when the game starts or when spawned
