@@ -14,4 +14,8 @@ class SHADOWQUESTS_API USQAssetManager : public UAssetManager
 {
 	GENERATED_BODY()
 	
+	static USQAssetManager& Get();
+
+	/** Starts initial load, gets called from InitializeObjectReferences */
+	virtual void StartInitialLoading() override;
 };
