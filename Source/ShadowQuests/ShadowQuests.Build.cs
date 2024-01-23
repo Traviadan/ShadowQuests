@@ -12,10 +12,13 @@ public class ShadowQuests : ModuleRules
 			"Core",
 			"CoreUObject",
 			"Engine",
+			"EnhancedInput",
+			"UMG",
+			"CommonUI",
 			"InputCore",
 			"Niagara",
-            "EnhancedInput"
-		});
+            "ConvenientLayout",
+        });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {
 			"GameplayAbilities",
