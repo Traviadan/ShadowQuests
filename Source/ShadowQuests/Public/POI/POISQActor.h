@@ -14,4 +14,10 @@ class SHADOWQUESTS_API APOISQActor : public ASQActor
 {
 	GENERATED_BODY()
 	
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "POI")
+	FName MapId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "POI")
+	FPrimaryAssetId AssetId;
 };
