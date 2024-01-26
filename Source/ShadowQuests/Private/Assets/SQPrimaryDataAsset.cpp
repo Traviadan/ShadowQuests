@@ -3,12 +3,11 @@
 
 #include "Assets/SQPrimaryDataAsset.h"
 
-USQPrimaryDataAsset::USQPrimaryDataAsset() :
-	AssetType(TEXT("SQDataAsset"))
+USQPrimaryDataAsset::USQPrimaryDataAsset()
 {
 }
 
 FPrimaryAssetId USQPrimaryDataAsset::GetPrimaryAssetId() const
 {
-	return FPrimaryAssetId(AssetType, AssetId);
+	return FPrimaryAssetId(TEXT("SQDataAsset"), AssetId);
 }

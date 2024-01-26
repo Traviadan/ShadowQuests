@@ -21,8 +21,5 @@ public:
 
 protected:
 	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-	FName AssetType;
-
-	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
 	FName AssetId;
 };
