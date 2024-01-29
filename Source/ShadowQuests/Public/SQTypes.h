@@ -1,5 +1,6 @@
 #pragma once
 
+#include "CoreMinimal.h"
 #include "SQTypes.generated.h"
 
 class UPrimaryDataAsset;
@@ -71,4 +72,17 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ESQItemVisibility ItemVisibility;
+};
+
+USTRUCT(BlueprintType)
+struct FSQWorldInformation
+{
+	GENERATED_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 InfoLevel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText Information;
 };

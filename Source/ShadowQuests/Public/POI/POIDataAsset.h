@@ -23,12 +23,15 @@ public:
 	//UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Spawn Info", meta = (AssetBundles = "Actor"))
 	//TSubclassOf<APOISQActor> POIClass;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Info", meta = (AssetBundles = "UI"))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Display", meta = (AssetBundles = "UI"))
 	FText DisplayName;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Info", meta = (AssetBundles = "UI"))
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Display", meta = (AssetBundles = "UI"))
 	FText Description;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Info", meta = (AssetBundles = "UI"))
-	TAssetPtr<UTexture2D> IconPtr;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Display", meta = (AssetBundles = "UI"))
+	TSoftObjectPtr<UTexture2D> IconPtr;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Information", meta = (AssetBundles = "Information"))
+	TMap<int32, FText> Informations;
 };
